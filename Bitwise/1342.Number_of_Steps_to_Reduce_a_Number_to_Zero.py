@@ -50,6 +50,7 @@ Example 1:
         - Return step_count
 """
 
+
 # Approach 1 & 2
 # Time Complexity: O(log N)
 # Space Complexity: O(1)
