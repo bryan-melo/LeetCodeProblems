@@ -87,7 +87,7 @@ if __name__ == "__main__":
     solution = Solution()
     
     # Print results
-    print(solution.numberOfSteps(14))
-    print(solution.numberOfSteps(8))
-    print(solution.numberOfSteps(123))
+    print(solution.numberOfSteps(14))       # Output: 6
+    print(solution.numberOfSteps(8))        # Output: 4
+    print(solution.numberOfSteps(123))      # Output: 12
     
