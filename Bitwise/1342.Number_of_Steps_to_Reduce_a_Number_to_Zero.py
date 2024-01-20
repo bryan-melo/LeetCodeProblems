@@ -70,7 +70,7 @@ class Solution:
             step_count = step_count + 1
             """
             
-            # Using Bitwise operations
+            # Using bitwise operations
             if num & 1 == 0:    # Compares least significant bit to zero
                 num = num >> 1   # Shifts 2 bits to the right
             else:
