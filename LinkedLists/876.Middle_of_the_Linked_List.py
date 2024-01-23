@@ -29,13 +29,19 @@ class ListNode:
 
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        pass
+        new_list = list()
+        
+        while head != None:
+            new_list.append(head.val)
     
 
 # Example usage
 if __name__ == "__main__":  
     # Creating a Solution instance 
     solution = Solution()
+    
+    # Create Linked list
+    head = ListNode(1)
     
     # Printing results    
     
