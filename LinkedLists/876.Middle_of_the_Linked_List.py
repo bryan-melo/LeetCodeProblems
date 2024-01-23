@@ -17,7 +17,7 @@ If there are two middle nodes, return the second middle node.
 
 
 # Code
-from typing import ListNode, Optional
+from typing import Optional
 
 
 # Definition for singly-linked list.
@@ -32,3 +32,10 @@ class Solution:
         pass
     
 
+# Example usage
+if __name__ == "__main__":  
+    # Creating a Solution instance 
+    solution = Solution()
+    
+    # Printing results    
+    
