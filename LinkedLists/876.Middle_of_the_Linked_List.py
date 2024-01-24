@@ -8,18 +8,19 @@ If there are two middle nodes, return the second middle node.
 
 # Approach
 """ 
-    - Initialize a variable (count) that will store the number of nodes in linked list
-    - Initiliaze another variable (check) that will be used to compare to count
-    - Initialize an empty node (new_head)
-    - Save the head of linked list
-    - Iterate through linked list
-        * Increment count if node exist
-    - Divide count by 2
-    - Iterate though linked list
-        * when check == count, assign node to new_head
-        * keep iterating through linked list until None is reached, add each node to new_linked_list
-    - Return new_linked_list
-    
+    - Initialize middle_node and assign it the head of linked list being passed
+    - Use while-loop to iterate linked-list while making sure the current and
+      next nodes are not None.
+    - while-loop logic:
+        - Advance middle_node pointer for every two advances in head pointer
+        - Example:
+            * head = [1, 2, 3, 4, 5]                       # head.val = 1
+            * middle_node = head                           # middle_node.val = 1
+            * Advance the head pointer by two nodes        # head.val = 3
+            * Advance the middle_node pointer by one node  # middle_node.val = 2
+            * Advance the head pointer by two nodes        # head.val = 5
+            * Advance the middle_node pointer by one node  # middle_node.val = 3
+            * etc.
 """
 
 
@@ -39,28 +40,15 @@ class ListNode:
 
 
 class Solution:
-    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        temp = head
-        check = 0
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]: 
+        middle_node = head
         
-        count = Solution.countNodes(self, temp)
-        count = (int)(count / 2)
-        
-        while temp and check != count:
-            check += 1
-            temp = temp.next
-            
-        return temp
-        
-    
-    def countNodes(self, head: Optional[ListNode]) -> int:
-        count = 0
-        
-        while head:
-            count += 1
+        while head and head.next != None:
             head = head.next
-
-        return count        
+            head = head.next
+            middle_node = middle_node.next
+            
+        return middle_node
         
 
 # Example usage
@@ -89,3 +77,4 @@ if __name__ == "__main__":
     while current:
         print(current.val)
         current = current.next
+        
