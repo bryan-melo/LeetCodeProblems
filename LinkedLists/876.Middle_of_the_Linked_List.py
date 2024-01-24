@@ -8,7 +8,7 @@ If there are two middle nodes, return the second middle node.
 
 # Approach
 """ 
-    - Initialize middle_node and assign it the head of linked list being passed
+    - Initialize middle_node and assign it to the head of linked list being passed
     - Use while-loop to iterate linked-list while making sure the current and
       next nodes are not None.
     - while-loop logic:
