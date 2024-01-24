@@ -24,7 +24,7 @@ If there are two middle nodes, return the second middle node.
 
 
 # Time Complexity: O(N)
-# Space Complexity O(N)
+# Space Complexity O(1)
 
 
 # Code
@@ -43,13 +43,14 @@ class Solution:
         temp = head
         check = 0
         
-        count = Solution.countNodes(temp)
-        count = count / 2
+        count = Solution.countNodes(self, temp)
+        count = (int)(count / 2)
         
-        print(count)
+        while temp and check != count:
+            check += 1
+            temp = temp.next
+            
         return temp
-        
-        
         
     
     def countNodes(self, head: Optional[ListNode]) -> int:
