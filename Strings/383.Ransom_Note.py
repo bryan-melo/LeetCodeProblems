@@ -17,7 +17,7 @@ Example 2:
 
 # Approach
 """
-
+    -
 """
 
 
