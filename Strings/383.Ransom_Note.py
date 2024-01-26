@@ -17,21 +17,29 @@ Example 2:
 
 # Approach
 """
-    -
+    - Store individual characters of ransomNote into Dictionary
+    - Search for each character in Dictionary and return true if
+      characters exists
+    - Otherwise return false
 """
 
 
-# Time Complexity: 
-# Space Complexity 
+# Time Complexity: O(N)
+# Space Complexity: O(N)
 
 
 # Code
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        pass
+        
+        my_dict = {}
+        
+        
     
     
 # Example usage
 if __name__ == "__main__":  
     # Creating a Solution instance 
     solution = Solution()
+    
+    solution.canConstruct("hello", "hi")
